@@ -180,11 +180,11 @@ export default function AdminDashboard() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-2 sm:col-span-1">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
+                  <input required type="text" placeholder="e.g. Classic Stiletto" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
                 </div>
                 <div className="col-span-2 sm:col-span-1">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Price (₹)</label>
-                  <input required type="number" min="0" value={formData.price} onChange={e => setFormData({...formData, price: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
+                  <input required type="number" min="0" placeholder="e.g. 1499" value={formData.price} onChange={e => setFormData({...formData, price: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
                 </div>
                 <div className="col-span-2 sm:col-span-1">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
@@ -195,15 +195,15 @@ export default function AdminDashboard() {
                 </div>
                 <div className="col-span-2 sm:col-span-1">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Sizes (comma separated)</label>
-                  <input required type="text" placeholder="5, 6, 7, 8" value={formData.sizes} onChange={e => setFormData({...formData, sizes: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
+                  <input required type="text" placeholder="e.g. 5, 6, 7, 8" value={formData.sizes} onChange={e => setFormData({...formData, sizes: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
                 </div>
                 <div className="col-span-2">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
-                  <input type="url" placeholder="https://..." value={formData.image_url} onChange={e => setFormData({...formData, image_url: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
+                  <input type="url" placeholder="e.g. https://images.unsplash.com/..." value={formData.image_url} onChange={e => setFormData({...formData, image_url: e.target.value})} className="w-full border border-gray-300 p-2 text-sm" />
                 </div>
                 <div className="col-span-2">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                  <textarea rows="3" value={formData.description} onChange={e => setFormData({...formData, description: e.target.value})} className="w-full border border-gray-300 p-2 text-sm"></textarea>
+                  <textarea rows="3" placeholder="Describe the footwear..." value={formData.description} onChange={e => setFormData({...formData, description: e.target.value})} className="w-full border border-gray-300 p-2 text-sm"></textarea>
                 </div>
                 <div className="col-span-2 flex items-center">
                   <input type="checkbox" id="featured" checked={formData.is_featured} onChange={e => setFormData({...formData, is_featured: e.target.checked})} className="mr-2 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" />
